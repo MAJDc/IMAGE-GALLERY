@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="view-image">
+      <img src="" alt="" />
+      <span>X</span>
+    </div>
+
+    <div class="image-container">
+      <img
+        src="https://www.fredzone.org/wp-content/uploads/2023/06/One-Piece-anime.webp"
+        alt=""
+      />
+      <img
+        src="https://wallpapers.com/images/high/trafalgar-law-one-piece-adoptive-father-corazon-jnycc26ry563q7sc.webp"
+        alt=""
+      />
+      <img
+        src="https://wallpapers.com/images/high/1920x1080-anime-portgas-d-ace-uzni5kjer3mq19co.webp"
+        alt=""
+      />
+      <img
+        src="https://wallpapers.com/images/high/luffy-aesthetic-with-serious-face-f8gawqkl6b4ct764.webp"
+        alt=""
+      />
+      <img
+        src="https://wallpapers.com/images/high/anime-lock-screen-roronoa-zoro-z9kxpjhd45fk3xg3.webp"
+        alt=""
+      />
+      <img
+        src="https://wallpapers.com/images/high/kaido-1332-x-850-wallpaper-wjkuslhur1yxhgcx.webp"
+        alt=""
+      />
+      <img
+        src="https://wallpapers.com/images/high/1920-x-1080-anime-luffy-l3gio96gpe6wl038.webp"
+        alt=""
+      />
+      <img
+        src="https://wallpapers.com/images/high/luffy-fighting-kaido-one-piece-wano-4k-mlq044kjbokehwkc.webp"
+        alt=""
+      />
+      <img
+        src="https://wallpapers.com/images/high/crying-luffy-and-shanks-one-piece-3jfepl9gqhdekrfe.webp"
+        alt=""
+      />
+      <img
+        src="https://wallpapers.com/images/hd/one-piece-luffy-and-sanji-h9o121rxj0hsps7t.webp"
+        alt=""
+      />
+      <img
+        src="https://wallpapers.com/images/high/one-piece-pictures-96prqse1k4x8a3wz.webp"
+        alt=""
+      />
+      <img
+        src="https://wallpapers.com/images/high/4k-anime-iphone-bleach-pirate-ship-9ah6j45s9adm2r8i.webp"
+        alt=""
+      />
+      <img
+        src="https://wallpapers.com/images/high/kaido-1400-x-1024-wallpaper-2hqv2496tuxavbjd.webp"
+        alt=""
+      />
+      <img
+        src="https://wallpapers.com/images/high/one-piece-live-flaming-hand-pt3h5u05zs460jvp.webp"
+        alt=""
+      />
+      <img
+        src="https://wallpapers.com/images/high/characters-of-one-piece-pxkj05iagtbranpp.webp"
+        alt=""
+      />
+      <img
+        src="https://wallpapers.com/images/high/joy-boy-luffy-looking-dope-fc75iaq5vtboziwv.webp"
+        alt=""
+      />
+    </div>
+  </body>
+  <script>
+    let images = document.querySelectorAll(".image-container img");
+    let viewImage = document.querySelector(".view-image");
+    let fullImage = document.querySelector(".view-image img");
+    let closeBtn = document.querySelector(".view-image span");
+    for (let image of images) {
+      image.addEventListener("click", function (e) {
+        console.log(e);
+        viewImage.style.display = "flex";
+        fullImage.src = e.target.src;
+      });
+    }
+    closeBtn.addEventListener("click", function () {
+      viewImage.style.display = "none";
+    });
+  </script>
+</html>
